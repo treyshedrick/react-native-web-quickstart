@@ -12,12 +12,12 @@ const compileNodeModules = [
 ].map(moduleName => path.resolve(appDirectory, `node_modules/${moduleName}`));
 
 const babelLoaderConfiguration = {
-  test: /\.js$|tsx?$/,
+  test: /\.js$|sx?$/,
   // Add every directory that needs to be compiled by Babel during the build.
   include: [
     path.resolve(__dirname, 'index.web.js'), // Entry to your application
-    path.resolve(__dirname, 'App.web.tsx'),
-    path.resolve(__dirname, './app/'), // Change this to your main App file
+    path.resolve(__dirname, 'App.web.js'),
+    path.resolve(__dirname, './app/'),
     path.resolve(__dirname, 'src'),
     ...compileNodeModules,
   ],
@@ -60,7 +60,7 @@ module.exports = {
     filename: 'rnw_blogpost.bundle.js',
   },
   resolve: {
-    extensions: ['.web.tsx', '.web.ts', '.tsx', '.ts', '.web.js', '.js'],
+    extensions: ['.jsx', '.web.js', '.js'],
     alias: {
       'react-native$': 'react-native-web',
     },
