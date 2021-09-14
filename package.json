@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "web": "webpack serve --mode=development --port 3000 --config webpack.config.js",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "build": "rm -rf dist/ && webpack --mode=production --config webpack.config.js",
-    "web": "webpack serve --mode=development --config webpack.config.js"
+    "lint": "eslint",
+    "build": "rm -rf dist/ && webpack --mode=production --config webpack.config.js"
   },
   "dependencies": {
     "react": "17.0.1",
