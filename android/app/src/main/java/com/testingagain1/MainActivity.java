@@ -1,4 +1,4 @@
-package com.testingagain1;
+package com.react_native_web_quickstart;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "testingagain1";
+    return "react-native-web-quickstart";
   }
 }

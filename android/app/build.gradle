@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.testingagain1"
+        applicationId "com.react_native_web_quickstart"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
