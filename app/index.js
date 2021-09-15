@@ -4,9 +4,8 @@ import {View, Text, StyleSheet} from 'react-native';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello from {'\n'}React Native Web!</Text>
-      <Text>Testiing</Text>
-      <Text>See if this is working</Text>
+      <Text style={styles.title}>Welcome!</Text>
+      <Text style={styles.title}>React Native Web Quickstart</Text>
     </View>
   );
 };
@@ -14,12 +13,12 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: 'skyblue',
-    paddingTop: 40,
-    paddingHorizontal: 10,
   },
   title: {
-    fontSize: 40,
+    fontSize: 25,
   },
 });
 
