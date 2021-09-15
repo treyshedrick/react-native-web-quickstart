@@ -15,6 +15,7 @@ const babelLoaderConfiguration = {
   include: [
     path.resolve(__dirname, 'index.web.js'),
     path.resolve(__dirname, './app/index.js'),
+    path.resolve(__dirname, './app/'),
     ...compileNodeModules,
   ],
   use: {
