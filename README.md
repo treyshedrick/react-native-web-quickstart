@@ -5,20 +5,23 @@
 <br/>
 
 #### Installation Steps:
-##### 1. run npx react-native init RNweb --template https://github.com/treyshedrick/react-native-web-quickstart.git
-##### 2. run npx react-native-rename "YourAppName"
-##### 3. add local.properties file in android folder with sdk.dir
-##### 4. change name of app in MainActivity.java file
-##### 5. add .gitignore file if it is not present [.gitignore](https://github.com/facebook/react-native/blob/main/template/_gitignore)
+1. run ```npx react-native init RNweb --template https://github.com/treyshedrick/react-native-web-quickstart.git```
+2. run ```npx react-native-rename "YourAppName"```
+3. add ```local.properties``` file in android folder with ```sdk.dir``` [if android build fails](https://stackoverflow.com/questions/32634352/react-native-android-build-failed-sdk-location-not-found)
+5. add [.gitignore](https://github.com/facebook/react-native/blob/main/template/_gitignore) file if it is not present
 
 <br/>
 
 ### Web
-#### npm run web
+```
+npm run web
+```
 
 ### Mobile
-#### npm run ios
-#### npm run android
+```
+npm run ios
+npm run android
+```
 
 <br/>
 
