@@ -1,4 +1,9 @@
 # react-native-web-quickstart
+
+<p align="center">
+<img src="https://i.ibb.co/SKx5pfQ/Screen-Shot-2021-09-17-at-6-28-11-PM.png" alt="Screen-Shot-2021-09-17-at-6-28-11-PM" border="0">
+<p>
+
 ### A quick and simple way to get started with react-native for both mobile and web.
 ###### Currently still modifying this template. Will continue to update steps
 
