@@ -5,7 +5,6 @@
 <p>
 
 ### A quick and simple way to get started with react-native for both mobile and web.
-###### Currently still modifying this template. Will continue to update steps
 
 <br/>
 
