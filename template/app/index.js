@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, Platform} from 'react-native';
 import {hasNotch} from 'react-native-device-info';
 
 const App = () => {
-  console.log(hasNotch());
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome!</Text>
@@ -22,14 +21,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     paddingTop: hasNotch() ? 50 : 0,
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
   },
   title: {
     fontSize: 25,
   },
   image: {
-    height: '35%',
-    minWidth: '100%',
+    width: '100%',
+    height: undefined,
+    aspectRatio: Platform.OS === 'web' ? 3 : 1.6,
+    backgroundColor: '#000000',
   },
 });
 
