@@ -1,5 +1,13 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, Platform} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Platform,
+  Linking,
+  TouchableOpacity,
+} from 'react-native';
 import {hasNotch} from 'react-native-device-info';
 import Hyperlink from 'react-native-hyperlink';
 
@@ -24,7 +32,16 @@ const App = () => {
         </View>
       </View>
       <View style={styles.footer}>
-        <Text>Test</Text>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://github.com/treyshedrick')}>
+          <Image
+            style={styles.logo}
+            source={require('./assets/GitHub-Mark.png')}
+          />
+        </TouchableOpacity>
+        <Text style={styles.footerText}>
+          Check out my other projects as well!
+        </Text>
       </View>
     </View>
   );
@@ -60,6 +77,7 @@ const styles = StyleSheet.create({
   textContent: {
     marginTop: 30,
     margin: 5,
+    alignItems: 'center',
   },
   statement: {
     marginTop: 15,
@@ -67,10 +85,23 @@ const styles = StyleSheet.create({
   },
   footer: {
     position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
     bottom: 0,
-    height: Platform.OS === 'web' ? 150 : 75,
+    height: Platform.OS === 'web' ? 150 : 100,
     backgroundColor: '#000000',
     width: '100%',
+    alignItems: 'center',
+    justifyContent: Platform.OS === 'web' ? 'center' : null,
+    paddingTop: Platform.OS === 'web' ? 0 : 10,
+  },
+  footerText: {
+    color: '#ffffff',
+    paddingTop: 5,
+  },
+  logo: {
+    width: 40,
+    height: 40,
   },
 });
 
