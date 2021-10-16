@@ -10,6 +10,10 @@ import {
 } from 'react-native';
 import {hasNotch} from 'react-native-device-info';
 import Hyperlink from 'react-native-hyperlink';
+import {detect} from 'detect-browser';
+
+const browser = detect();
+const isSafari = browser.name === 'safari';
 
 const App = () => {
   return (
@@ -65,7 +69,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: undefined,
+    // Safari does not like aspectRatio :(
+    height: isSafari ? 400 : undefined,
     maxHeight: 400,
     aspectRatio: Platform.OS === 'web' ? 2 : 1.6,
     backgroundColor: '#000000',
